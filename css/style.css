@@ -1,0 +1,122 @@
+/* start general rules */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:" Be Vietnam Pro" ,sans-serif ; 
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+:root{
+    --primary-color:#FF9500;
+    --on-primary-color:#fff;
+    --main-bg-color:#F7F7F8;
+    --secondary-bg-color:#fff;
+    --display-text-color:#1A1A1A;
+    --title-text-color:#262626;
+    --paragraph-text-main-color:#4C4C4D;
+    --paragraph-text-secondary-color:#59595A;
+    --section-border:1px solid #F1F1F3;
+
+
+}
+.container{
+    width: calc(100% - 120px);
+    margin: auto;
+}
+
+.logo{
+    padding: 5.7px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    width: fit-content;
+}
+.logo img{
+    display: block;
+    width: 33px;
+    height: 33px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+body{
+    background-color: var(--main-bg-color);
+    padding: 20px 20px 0;
+}
+/* end general rules */
+
+/* start header */
+header{
+    padding: 16px 0 20px;
+    border-bottom: var(--section-border);
+}
+header .container{
+
+}
+header .row{
+    gap: 50px;
+}
+header .row nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+}
+header .row nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    font-size: 14px;
+    color: var(--title-text-color);
+    text-transform: capitalize;
+
+}
+header .row nav a.active ,
+header .row nav a:hover{
+    padding: 12px 20px;
+    background-color: #F1F1F3;
+    border-radius: 8px;
+}
+header .row .auth{
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-transform: capitalize;
+
+}
+header .row .auth .sign-up{
+    transition: all 0.5s;
+    color: var(--title-text-color);
+    padding: 12px 0;
+}
+header .row .auth .sign-up:hover{
+    color: var(--on-primary-color);
+    background-color: var(--primary-color);
+    padding: 12px 24px;
+    border-radius: 6px;
+
+}
+header .row .auth .log-in{
+    padding: 12px 24px;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    background-size:500%;
+    color: var(--on-primary-color);
+    transition: all 0.5s;
+}
+header .row .auth .log-in:hover{
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+/* end header */
