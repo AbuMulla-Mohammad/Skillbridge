@@ -102,9 +102,7 @@ body{
 }
 /* phon */
 @media (max-width: 599px) {
-    body{
-        background-color: red;
-    }
+
     .container{
         width: calc(100% - 32px);
         
@@ -139,9 +137,7 @@ body{
 
  /*tablet */
 @media (min-width: 600px) and (max-width: 904px) {
-    body{
 
-    }
     .container{
         width: calc(100% - 64px);
     }
@@ -175,12 +171,9 @@ body{
 
 /* small  labtop*/
 @media (min-width: 905px) and (max-width: 1239px) {
-    body{
-        background-color: blue;
-    }
+
     .container{
         width: calc(100% - 128px);
-        background-color: green;
     }
     section{
         margin-bottom: 75px;
@@ -193,12 +186,9 @@ body{
 
 /* desktop */
 @media (min-width: 1601px) {
-    body{
-        background-color: teal;
-    }
+
     .container{
         width: calc(100% - 324px);
-        background-color: yellow;
     }
     .logo img{
         width: 40px;
