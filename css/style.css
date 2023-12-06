@@ -295,6 +295,22 @@ header .row .auth .log-in:hover{
         display: block;
     }
 }
+@media (min-width: 905px) and (max-width: 1200px) {
+    header .row nav a{
+        font-size: 12px;
+    }
+    header .row nav a.active ,
+    header .row nav a:hover{
+        padding: 10px 18px;
+        border-radius: 7px;
+    }
+    header .row .auth{
+        font-size: 12px;
+    }
+    header .row .auth .log-in{
+        padding: 10px 30px;
+    }
+}
 @media (min-width: 1601px){
     header .row nav a{
         font-size: 18px;
@@ -321,6 +337,7 @@ header .row .auth .log-in:hover{
     align-items: center;
     margin-top: 121px;
     margin-bottom: 100px;
+    text-align: center;
 }
 .hero .hero-content .hero-text .main-head{
     display: flex;
@@ -412,12 +429,12 @@ header .row .auth .log-in:hover{
     .hero .hero-content .hero-text{
         margin-top: 50px;
         margin-bottom: 30px;
+
     }
     .hero .hero-content .hero-text .main-head{
         padding: 14px;
         text-transform: capitalize;
         margin-bottom: 16px;
-        
     }
     .hero .hero-content .hero-text .main-head h1{
         font-size: 16px;
@@ -790,5 +807,116 @@ header .row .auth .log-in:hover{
     }
 }
 /* end our courses section */
+/* start out testimonials  section*/
+.our-testimonials{
+    
+}
+.testimonials{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.testimonials .testimonial{
+    width: calc((100% - 20px) / 2);
+    border-radius: 10px;
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.testimonials .testimonial p{
+    flex-grow: 1;
+    padding: 40px;
+    line-height: 150%;
+    color: var(--paragraph-text-main-color);
+}
+.testimonials .testimonial p::first-letter{
+    text-transform: capitalize;
+}
+.testimonials .testimonial .client{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding:24px  40px ;
+    gap: 10px;
+    border-top: var(--section-border);
+}
+.testimonials .testimonial .client img{
+    width: 50px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.testimonials .testimonial .client span{
+    text-transform: capitalize;
+    font-weight:600 ;
+    flex-grow: 1;
+    color: var(--title-secondary-text-color);
+}
+.testimonials .testimonial .client a{
+    padding: 14px 16px;
+    font-weight: 500;
+    color: var(--title-text-color);
+    border: var(--section-border);
+    background-color: var(--main-bg-color);
+    border-radius: 6px;
+    transition: all 0.5s;
+}
+.testimonials .testimonial .client a:hover{
+    border: var(--secondary-border);
+    color: var(--primary-color);
+    background-color: var(--secondary-bg-color);
+}
+@media (max-width: 599px){
+    .testimonials .testimonial{
+        width:100%;
+        border-radius: 10px;
+    }
+    .testimonials .testimonial p{
+        font-size: 14px;
+        padding: 30px;
+    }
+    .testimonials .testimonial .client{
+        padding: 20px 30px;
+    }
+    .testimonials .testimonial .client span{
+        font-size: 16px;
+    }
+    .testimonials .testimonial .client a{
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}
+ /*tablets */
+@media (min-width: 600px) and (max-width: 908px) {
+    .testimonials .testimonial{
+        width:100%;
+        border-radius: 10px;
+    }
+    .testimonials .testimonial p{
+        font-size: 14px;
+        padding: 30px;
+    }
+    .testimonials .testimonial .client{
+        padding: 20px 30px;
+    }
+    .testimonials .testimonial .client span{
+        font-size: 16px;
+    }
+    .testimonials .testimonial .client a{
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}
+/* labtop */
+@media (min-width: 909px) and (max-width: 1200px) {
+
+}
+
+/* desktop */
+@media (min-width: 1601px) {
+
+}
+/* end our testimonials section */
 
 
