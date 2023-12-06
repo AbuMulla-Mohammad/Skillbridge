@@ -589,6 +589,9 @@ header .row .auth .log-in:hover{
     color: var(--paragraph-text-main-color);
     line-height: 150%;
 }
+.benefits .cards .card .card-text p::first-letter{
+    text-transform: capitalize;
+}
 .benefits .cards .card a{
     padding: 14px;
     border-radius: 6px;
@@ -634,6 +637,158 @@ header .row .auth .log-in:hover{
     }
 }
 /* end benefits section */
+/* start our courses section */
+.our-courses{
 
+}
+.our-courses .courses{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.our-courses .courses .course{
+    padding: 40px;
+    border-radius: 10px;
+    width: calc((100% - 20px) / 2);
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap: 24px;
+}
+.our-courses .courses .course img{
+    width: 100%;
+    aspect-ratio: 2.0657894/1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.our-courses .courses .course .course-details{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.our-courses .courses .course .course-details .row {
+    gap: 10px;
+}
+.our-courses .courses .course .course-details .row span{
+    font-size: 14px;
+    color: var(--paragraph-text-main-color);
+    padding: 8px 14px;
+    border: var(--section-border);
+    border-radius: 6px;
+}
+.our-courses .courses .course .course-details .instructor{
+    font-weight: 500;
+    color: var(--title-text-color);
+    text-transform: capitalize;
+}
+.our-courses .courses .course .course-info{
+    flex-grow: 1;
+}
+.our-courses .courses .course .course-info h3{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+}
+.our-courses .courses .course .course-info p{
+    line-height: 150%;
+    color: var(--paragraph-text-main-color);
+}
+.our-courses .courses .course .course-info p::first-letter{
+    text-transform: capitalize;
+}
+.our-courses .courses .course a{
+    padding: 14px 24px;
+    background-color: var(--main-bg-color);
+    border-radius: 6px;
+    color: var(--title-text-color);
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    border: var(--section-border);
+    transition: all 0.5s;
+}
+.our-courses .courses .course a:hover{
+    border: var(--secondary-border);
+    color: var(--primary-color);
+}
+@media (max-width: 599px){
+    .our-courses .courses .course{
+        padding: 24px;
+        width:100%; 
+    }
+    .our-courses .courses .course img{
+        aspect-ratio: 1.796511627906/1;
+        border-radius: 6px;
+    }
+    .our-courses .courses .course .course-details{
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+    }
+    .our-courses .courses .course .course-info h3{
+        font-size: 18px;
+    }
+    .our-courses .courses .course .course-info p{
+        font-size: 14px;
+    }
+}
+ /*tablets */
+@media (min-width: 600px) and (max-width: 904px) {
+    .our-courses .courses .course{
+        padding: 24px;
+        width:100%; 
+    }
+    .our-courses .courses .course img{
+        aspect-ratio: 1.896511627906/1;
+        border-radius: 6px;
+    }
+
+}
+@media (min-width: 905px) and (max-width: 1200px) {
+    .our-courses .courses .course .course-details{
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+    }
+}
+/* desktop */
+@media (min-width: 1601px) {
+    .our-courses .courses .course{
+        padding: 50px;
+        gap: 30px;
+        border-radius: 12px;
+    }
+    .our-courses .courses .course img{
+        aspect-ratio: 1.7973684/1;
+    }
+    .our-courses .courses .course .course-details .row span{
+        font-size: 18px;
+        padding: 10px 16px;
+        border-radius: 8px;
+    }
+    .our-courses .courses .course .course-details .instructor{
+        font-size: 20px;
+    }
+    .our-courses .courses .course .course-info h3{
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+    .our-courses .courses .course .course-info p{
+        font-size: 18px;
+    }
+    .our-courses .courses .course a{
+        padding: 18px 24px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+/* end our courses section */
 
 
