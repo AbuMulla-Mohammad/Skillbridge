@@ -67,7 +67,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 250px;
     margin-bottom: 60px;
 }
 .section-header .text{
@@ -95,6 +94,7 @@ body{
     color: var(--title-text-color);
     border: var(--section-border);
     transition: all 0.5s;
+    margin-left: auto;
 }
 .section-header a:hover{
     border: var(--secondary-border);
@@ -201,9 +201,6 @@ body{
 header{
     padding: 16px 0 20px;
     border-bottom: var(--section-border);
-}
-header .container{
-
 }
 header .row{
     gap: 50px;
@@ -325,12 +322,6 @@ header .row .auth .log-in:hover{
 
 /* end header */
 /* start hero section */
-.hero{
-
-}
-.hero .hero-content{
-
-}
 .hero .hero-content .hero-text{
     display: flex;
     flex-direction: column;
@@ -569,9 +560,6 @@ header .row .auth .log-in:hover{
 }
 /* end companes section */
 /* start benefits section */
-.benefits{
-
-}
 .benefits .cards{
     display: flex;
     flex-wrap: wrap;
@@ -585,12 +573,16 @@ header .row .auth .log-in:hover{
     background-color: var(--secondary-bg-color);
     padding: 40px;
     border-radius: 10px;
+    flex-grow: 1;
 }
 .benefits .cards .card span{
     align-self: flex-end;
     font-size: 60px;
     color: var(--title-text-color);
     font-weight: 700;
+}
+.benefits .cards .card .card-text{
+    flex-grow: 1;
 }
 .benefits .cards .card .card-text h3{
     margin-bottom: 10px;
@@ -635,7 +627,7 @@ header .row .auth .log-in:hover{
  /*tablets */
 @media (min-width: 600px) and (max-width: 904px) {
     .benefits .cards .card{
-        width: calc(100% );
+        width: calc((100% - 30px ) / 2) ;
         gap: 30px;
         padding: 30px;
     }
@@ -655,9 +647,7 @@ header .row .auth .log-in:hover{
 }
 /* end benefits section */
 /* start our courses section */
-.our-courses{
 
-}
 .our-courses .courses{
     display: flex;
     flex-wrap: wrap;
@@ -808,9 +798,6 @@ header .row .auth .log-in:hover{
 }
 /* end our courses section */
 /* start out testimonials  section*/
-.our-testimonials{
-    
-}
 .testimonials{
     display: flex;
     flex-wrap: wrap;
@@ -918,5 +905,288 @@ header .row .auth .log-in:hover{
 
 }
 /* end our testimonials section */
+/* start .our pricing section*/
+.section-header .subscription-type{
+    background: var(--secondary-bg-color);
+    border-radius: 8px;
+    padding: 12px;
+    align-self: flex-end;
+    
+}
+.section-header .subscription-type button{
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: var(--secondary-bg-color);
+    color: var(--paragraph-text-main-color);
+    transition: all 0.5s;
+}
+
+.section-header .subscription-type button.active{
+    background-color: var(--primary-color);
+    color: white;
+}
+.section-header .subscription-type button:hover{
+    border: var(--secondary-border);
+    color: var(--primary-color);
+    background-color: var(--main-bg-color);
+}
+.our-pricing .row{
+    background-color: var(--secondary-bg-color);
+    border-radius:12px ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px;
+}
+.our-pricing .row .column{
+    width:calc((100% - 30px) / 2 );
+    border: var(--section-border);
+    border-radius: 12px;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+}
+.our-pricing .row .column h3{
+    border-radius: 4px;
+    padding: 10px 22px;
+    text-align: center;
+    background-color: #FFF9F0;
+    border: 1px solid #FFEACC;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--title-text-color);
+    text-transform: capitalize;
+}
+.our-pricing .row .column .subscription{
+    text-align: center;
+    margin: 50px 0;
+}
+.our-pricing .row .column .subscription span.price{
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--title-text-color);
+}
+.our-pricing .row .column .subscription span.duration{
+    font-weight: 500;
+    color: var(--paragraph-text-main-color);
+}
+.our-pricing .row .column .available-features{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border:var(--section-border);
+    border-bottom: none;
+    border-radius: 14px 14px 0 0;
+}
+.our-pricing .row .column .available-features h4{
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--title-text-color);
+    font-size: 18px;
+    font-weight: 500;
+} 
+.our-pricing .row .column .available-features .features{
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.our-pricing .row .column .available-features .features span{
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    border: var(--section-border);
+    border-radius: 6px;
+}
+.our-pricing .row .column .available-features .features span .icon{
+    padding: 4px;
+    background-color: #FFF4E5;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+.our-pricing .row .column a{
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+    text-align: center;
+    padding: 18px 24px;
+    border-radius: 0 0 14px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.5s;
+    border: 1px solid transparent;
+}
+.our-pricing .row .column a:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-bg-color);
+    border: var(--secondary-border);
+}
+@media (max-width: 599px){
+    .section-header .subscription-type{
+        align-self: center;
+    }
+    .our-pricing .row{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .our-pricing .row .column{
+        width: 100%;
+        flex-grow: 1;
+        padding: 30px 20px;
+    }
+    .our-pricing .row .column h3{
+        padding: 8px 22px;
+        font-size: 16px;
+    }
+    .our-pricing .row .column .subscription{
+        text-align: center;
+        margin: 30px 0;
+    }
+    .our-pricing .row .column .subscription span.price{
+        font-size: 50px;
+    }
+    .our-pricing .row .column .subscription span.duration{
+        font-size: 14px;
+    }
+    .our-pricing .row .column .available-features{
+        padding: 20px;
+        gap: 20px;
+        border-radius: 10px 10px 0 0;
+    }
+    .our-pricing .row .column .available-features .features{
+        padding: 0;
+    }
+}
+ /*tablets */
+@media (min-width: 600px) and (max-width: 904px) {
+    .section-header .subscription-type{
+        align-self: center;
+    }
+    .our-pricing .row{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .our-pricing .row .column{
+        width: 100%;
+        flex-grow: 1;
+        padding: 30px 20px;
+    }
+    .our-pricing .row .column h3{
+        padding: 8px 22px;
+        font-size: 16px;
+    }
+    .our-pricing .row .column .subscription{
+        text-align: center;
+        margin: 30px 0;
+    }
+    .our-pricing .row .column .subscription span.price{
+        font-size: 50px;
+    }
+    .our-pricing .row .column .subscription span.duration{
+        font-size: 14px;
+    }
+    .our-pricing .row .column .available-features{
+        padding: 20px;
+        gap: 20px;
+        border-radius: 10px 10px 0 0;
+    }
+    .our-pricing .row .column .available-features .features{
+        padding: 0;
+    }
+}
+/* labtop */
+@media (min-width: 905px) and (max-width: 1200px) {
+    .section-header .subscription-type{
+        align-self: center;
+    }
+    .our-pricing .row{
+        padding: 20px;
+    }
+    .our-pricing .row .column{
+        flex-grow: 1;
+        padding: 30px 20px;
+    }
+    .our-pricing .row .column h3{
+        padding: 8px 22px;
+        font-size: 16px;
+    }
+    .our-pricing .row .column .subscription{
+        text-align: center;
+        margin: 30px 0;
+    }
+    .our-pricing .row .column .subscription span.price{
+        font-size: 50px;
+    }
+    .our-pricing .row .column .subscription span.duration{
+        font-size: 14px;
+    }
+    .our-pricing .row .column .available-features{
+        padding: 20px;
+        gap: 20px;
+        border-radius: 10px 10px 0 0;
+    }
+    .our-pricing .row .column .available-features .features{
+        padding: 0;
+    }
+}
+/* desktop */
+@media (min-width: 1601px) {
+    .section-header .subscription-type button{
+        padding: 14px 30px;
+        font-size: 18px;
+    }
+    .our-pricing .row{
+        gap: 30px;
+        padding: 80px;
+    }
+    .our-pricing .row .column{
+        padding: 50px 30px;
+    }
+    .our-pricing .row .column h3{
+        border-radius: 6px;
+        padding: 12px 22px;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .our-pricing .row .column .subscription span.price{
+        font-size: 80px;
+    }
+    .our-pricing .row .column .subscription span.duration{
+        font-size: 20px;
+    }
+
+
+    .our-pricing .row .column .available-features{
+        padding: 40px;
+        gap: 30px;
+    }
+    .our-pricing .row .column .available-features h4{
+        font-size: 20px;
+    } 
+    .our-pricing .row .column .available-features .features span{
+        gap: 12px;
+        padding: 14px;
+        border-radius: 8px;
+    }
+    .our-pricing .row .column .available-features .features span .icon{
+        padding: 6px;
+        border-radius: 6px;
+    }
+    .our-pricing .row .column .available-features .features span .icon img{
+        width: 20px;
+        height: 20px;
+    }
+    .our-pricing .row .column a{
+        padding: 20px 24px;
+        border-radius: 0 0 8px 8px;
+        font-size: 18px;
+    }
+}
+/* end our pricing section */
 
 
