@@ -65,7 +65,7 @@ section{
 }
 body{
     background-color: var(--main-bg-color);
-    padding: 20px 20px 0;
+    /* padding: 20px 20px 0; */
 }
 
 .section-header{
@@ -221,6 +221,7 @@ header .row .burger-icon{
 }
 header .row nav{
     display: flex;
+    flex-grow: 1;
     flex-wrap: wrap;
     gap: 26px;
 }
@@ -284,8 +285,13 @@ header .row .auth .log-in:hover{
     color: var(--primary-color);
 }
 header .row a.burger{
+    display: none;
     transition: all 0.5s;
 }
+header .row a .burger-icon{
+    display: none;
+}
+
 /* phon */
 @media (max-width: 600px){
     header .row{
@@ -314,7 +320,10 @@ header .row a.burger{
     header .row .auth .log-in{
         padding: 12px 20px;
     }
-    header .row .burger-icon{
+    header .row a.burger{
+        display: block;
+    }
+    header .row a .burger-icon{
         display: block;
     }
 }
@@ -334,7 +343,10 @@ header .row a.burger{
         height: 0;
         transition: all 0.5s;
     }
-    header .row .burger-icon{
+    header .row a.burger{
+        display: block;
+    }
+    header .row a .burger-icon{
         display: block;
     }
 }
@@ -619,7 +631,7 @@ header .row a.burger{
     background-color: var(--secondary-bg-color);
     padding: 40px;
     border-radius: 10px;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 .benefits .cards .card span{
     align-self: flex-end;
@@ -640,7 +652,8 @@ header .row a.burger{
 
 }
 .benefits .cards .card .card-text p{
-    height: 55px;
+    flex-grow: 1;
+    font-size: 20px;
     color: var(--paragraph-text-main-color);
     line-height: 150%;
 }
@@ -1581,5 +1594,229 @@ header .row a.burger{
 }
 
 /* end faq section */
+/* start footer */
+footer{
+    background-color: var(--secondary-bg-color);
+    padding:100px 0 30px;
 
+}
+footer .row{
+    padding-bottom: 50px;
+    border-bottom: var(--section-border);
+    justify-content: space-between;
+    align-items: flex-start;
+}
+footer .column-start{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+footer .column-start .logo{
+    margin-bottom: 20px;
+    padding: 7px;
+}
+footer .column-start .logo img{
+    width: 40px;
+    height: 40px;
+}
+footer .column-start div:not(.logo){
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--title-text-color);
+    font-size: 18px;
+}
+footer .column-end{
+    
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+footer .column-end nav{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+footer .column-end nav a{
+    line-height: 150%;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: var(--paragraph-text-secondary-color);
+    transition: all 0.5s;
+}
+footer .column-end nav a:first-child ,
+footer .column-end nav a:hover{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
 
+footer .column-end nav p:first-child{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 150%;
+    text-transform: capitalize;
+}
+footer .column-end nav:last-child .social-icons{
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+
+}
+footer .column-end nav:last-child .social-icons a{
+    padding: 14px;
+    background-color: var(--main-bg-color);
+    border-radius: 8px;
+    width: 52px;
+    height: 52px;
+}
+footer .column-end nav:last-child .social-icons a img{
+    width: 24px;
+    height: 24px;
+}
+footer .copy-right{
+    text-align: center;
+    padding-top: 50px;
+    line-height: 150%;
+    font-size: 14px;
+    color: #656567;
+}
+@media (max-width: 600px){
+    footer{
+        padding:50px 0 24px;
+    
+    }
+    footer .row{
+        padding-bottom: 20px;
+        gap: 24px;
+        flex-direction: column;
+    }
+    footer .column-start{
+        gap: 12px;
+    }
+    footer .column-start .logo{
+        margin-bottom: 18px;
+        padding: 5.7px;
+    }
+    footer .column-start .logo img{
+        width: 32px;
+        height: 32px;
+    }
+    footer .column-start div:not(.logo){
+        font-size: 15px;
+    }
+
+    footer .column-end{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    footer .column-end nav{
+        width: calc((100% - 30px) / 2);
+        gap: 4px;
+    }
+    footer .column-end nav a{
+        font-size: 14px;
+    }
+    footer .column-end nav a:first-child ,
+    footer .column-end nav a:hover{
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    
+    footer .column-end nav p:first-child{
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    footer .column-end nav:last-child .social-icons{
+        justify-content: flex-start;
+    }
+    footer .column-end nav:last-child .social-icons a{
+        padding: 12px;
+        border-radius:6px;
+        width: 44px;
+        height: 44px;
+    }
+    footer .column-end nav:last-child .social-icons a img{
+        width: 20px;
+        height: 20px;
+    }
+    footer .copy-right{
+        padding-top: 20px;
+    }
+}
+ /*tablets */
+@media (min-width: 600px) and (max-width: 1110px) {
+    footer{
+        padding:50px 0 24px;
+    
+    }
+    footer .row{
+        padding-bottom: 20px;
+        gap: 24px;
+    }
+    footer .column-start{
+        gap: 12px;
+    }
+    footer .column-start .logo{
+        margin-bottom: 18px;
+        padding: 5.7px;
+    }
+    footer .column-start .logo img{
+        width: 32px;
+        height: 32px;
+    }
+    footer .column-start div:not(.logo){
+        font-size: 15px;
+    }
+
+    footer .column-end{
+        flex-wrap: wrap;
+    }
+    footer .column-end nav{
+        width: calc((100% - 30px) / 2);
+        gap: 4px;
+        flex-grow: 1;
+    }
+    footer .column-end nav a{
+        font-size: 14px;
+    }
+    footer .column-end nav a:first-child ,
+    footer .column-end nav a:hover{
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    
+    footer .column-end nav p:first-child{
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    footer .column-end nav:last-child .social-icons{
+        justify-content: flex-start;
+    }
+    footer .column-end nav:last-child .social-icons a{
+        padding: 12px;
+        border-radius:6px;
+        width: 44px;
+        height: 44px;
+    }
+    footer .column-end nav:last-child .social-icons a img{
+        width: 20px;
+        height: 20px;
+    }
+    footer .copy-right{
+        padding-top: 20px;
+    }
+}
+/* labtop */
+/* desktop */
+@media (min-width: 1601px) {
+    footer .column-end nav{
+        gap: 8px;
+    }
+    footer .copy-right{
+        font-size: 18px;
+    }
+}
+/* end footer */
