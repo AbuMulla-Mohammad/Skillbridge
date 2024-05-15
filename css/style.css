@@ -19,6 +19,7 @@ img{
     color: var(--on-primary-color);
 }
 :root{
+    
     scroll-behavior: smooth;
     --primary-color:#FF9500;
     --on-primary-color:#fff;
@@ -31,6 +32,7 @@ img{
     --paragraph-text-secondary-color:#59595A;
     --secondary-border:1px solid var(--primary-color);
     --section-border:1px solid #F1F1F3;
+    --active-bg-color:#F1F1F3;
     --space-betweent-sections:100px;
 }
 section{
@@ -65,6 +67,7 @@ section{
 }
 body{
     background-color: var(--main-bg-color);
+    transition: all 0.5s;
     /* padding: 20px 20px 0; */
 }
 
@@ -248,8 +251,14 @@ header .row nav a{
 header .row nav a.active ,
 header .row nav a:hover{
     padding: 12px 20px;
-    background-color: #F1F1F3;
+    background-color:var(--active-bg-color);
     border-radius: 8px;
+}
+header .row button.dark-btn{
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
 }
 header .row .auth{
     margin-left: auto;
