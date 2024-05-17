@@ -1,7 +1,7 @@
-# Skill Bridge - Your Gateway to Learning
+# SkillBridge - Your Gateway to Learning
 
 ## Overview
-Skill Bridge is committed to delivering a clean, structured, and intuitive learning experience. Our platform is designed to be user-friendly, offering a seamless journey for learners to acquire knowledge and skills.
+SkillBridge is a landing page build with HTML/CSS with clean , structured and responsive design to be user-friendly interface.
 [![SkillBridge](SkillBridgeMainImg.jpg)](https://abumulla-mohammad.github.io/Skillbridge/)
 ## Features
 
